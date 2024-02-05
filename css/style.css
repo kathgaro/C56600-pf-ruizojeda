@@ -1,0 +1,232 @@
+/*
+✨rem - Utiliza por DEFAULT 16px
+1rem 👉 16px
+2rem 👉 32px
+0.5rem 👉8px
+
+✨em - Configuramos el valor que viene por default
+font-size: 24px;
+1em 👉24px
+1.5em 👉 18px
+
+✨Tamaños
+width: Ancho
+Height: alto
+*/
+
+/*Reset*/
+*{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* grilla */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        "header   header   header    header"
+        "main     main     section   section"
+        "main      main    section   section"
+        "footer    footer    footer    footer"
+     ;
+}
+header{
+    grid-area: header;
+}
+/* Header */
+.navbar{
+    background-color:  #f7f6f2;
+}
+.navbar--barra{
+    background-color:  #f7f6f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar--barra nav{
+    background-color: #f7f6f2;
+}
+.navbar--barra nav ul{
+    display: flex;
+    gap: 1em;
+}
+.navbar--barra nav ul li{
+    list-style: none;
+}
+.navbar--barra nav ul li a{
+    text-decoration: none;
+    color: #743a11;
+}
+/*Tamaño logo*/
+.cont-logo{
+    width: 150px;
+    padding: 1rem;
+}
+.cont-logo img{
+    width: 100%;
+}
+.navbar--banner{
+    background-image: url('../assets/portada-index.jpeg');
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar--banner-promo{
+    width: 50%;
+}
+.navbar--banner-promo p{
+    font-size: 4rem;
+    text-align: center;
+    color: #743a11;
+}
+/*form-banner*/
+.navbar--banner-form{
+    width: 50%;
+    background-color: #743a1152;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.btn-k{
+    background-color: #743a11;
+    color: #ffffff;
+    padding: 0.4rem;
+    margin: 0.6rem;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Main */
+.contenido-principal{
+    margin: 30px 0 50px;
+    grid-area: main;
+}
+.title{
+    font-weight: 400;
+    color: #38c4b2;
+    text-align: center;
+}
+.sub-title{
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+.card-flex{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-flow: wrap;
+}
+.card{
+    width: 250px;
+    height: 18rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.card img{
+    width: 100%;
+}
+.card p{
+    line-height: 36px;
+}
+.border{
+    border: 1px solid #000000;
+}
+
+        /*Galeria*/
+.title-galeria{
+    letter-spacing: 7px;
+}
+
+/*new in*/
+.newin{
+    grid-area: section;
+}
+.newin-cont{
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.newin-cont-img{
+    width: 50%;
+    height: 210px;
+    overflow: hidden;
+}
+.newin-cont-img img{
+    width: 100%;
+}
+.newin-txt{
+    width: 50%;
+}
+/*footer*/
+footer{
+    grid-area: footer;
+    background-color:  #fbefe5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #743a11;
+}
+footer img{
+    /*Tamaño del logo en footer*/
+    width: 2rem;
+}
+
+
+/* MEDIA QUERIE - desktop a mobile
+
+Formato Tablet - media querie con parametros
+*/
+
+@media (min-width:  768px) and (max-width: 1200px){
+    .grid-container{
+        display: grid;
+        background-color: #cacaca;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:0.5fr repeat( 3, 1fr);
+        grid-template-areas: 
+            "header    header "
+            "section   section  "
+            "main       main  "
+            "footer    footer"
+         ;
+    }
+    .title{
+        color: #000000;
+        
+    }
+    .sub-title{
+        display: none;
+    }
+}
+/*mobile */
+/* Declaracion literal */
+@media (max-width: 480px){
+    .grid-container{
+        background-color: #1d9d5d;
+        grid-template-columns: 1fr;
+        grid-template-rows:0.5fr repeat( 3, 1fr);
+        grid-template-areas: 
+                "header  "
+                "section  "
+                "main   "
+                "footer "
+             ;   
+    }
+}
+

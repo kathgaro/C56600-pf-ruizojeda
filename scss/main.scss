@@ -1,0 +1,25 @@
+// no de js - no se ve 
+
+/* nota de css - si se ve*/
+
+
+// ESTE ARCHIVO ES EL QUE CONTIENE MI MENU PRINCIPAL
+
+
+//reset
+@import './reset/vars';
+@import './reset/reset';
+
+@import './reset/mixin';
+
+//layout - grid
+@import './reset/layout';
+
+
+
+//estructura
+@import 'header';
+@import 'principal';
+@import 'footer'
+
+//media queries

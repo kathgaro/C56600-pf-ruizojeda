@@ -1,0 +1,79 @@
+//Todo el codigo que corresponde al header
+
+header{
+    grid-area: header;
+}
+/* Header */
+.navbar{
+    background-color: $color-white;
+
+    &--barra{
+        background-color: $color-white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        nav{
+            background-color: $color-white;
+            ul{
+                display: flex;
+                gap: 1em;
+
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $color-txt;
+                        &:hover{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    &--banner{
+        background-image: url('../assets/portada-index.jpeg');
+        @include sizes (0, 20rem);
+        @include alineaciones (space-around, center, none);
+
+        &-promo{
+            width: 50%;
+
+            p{
+                font-size: map-get($size-title , text );
+                text-align: center;
+                color: #743a11;
+            }
+        }
+        &-form{
+            width: 50%;
+            background-color: #743a1152;
+            @include column-center;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+
+/*Tamaño logo*/
+.cont-logo{
+    @include sizes (150px, 0);
+    padding: 1rem;
+
+    img{
+        width: 100%;
+    }
+}
+
+.btn-k{
+    background-color: #743a11;
+    color: #ffffff;
+    padding: 0.4rem;
+    margin: 0.6rem;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+}

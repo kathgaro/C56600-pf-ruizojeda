@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* nota de css - si se ve*/
+.k__title-prin {
+  font-size: 20rem;
+}
+
+.k__title-sec {
+  font-size: 16rem;
+}
+
+.k__title-ter {
+  font-size: 13rem;
+}
+
+.k__text {
+  font-size: 3rem;
+}
+
+/*Reset*/
+* {
+  font-family: "Quicksand", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "header   header   header    header" "main     main     section   section" "main      main    section   section" "footer    footer    footer    footer";
+}
+
+header {
+  grid-area: header;
+}
+
+/* Header */
+.navbar {
+  background-color: #f7f6f2;
+}
+.navbar--barra {
+  background-color: #f7f6f2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar--barra nav {
+  background-color: #f7f6f2;
+}
+.navbar--barra nav ul {
+  display: flex;
+  gap: 1em;
+}
+.navbar--barra nav ul li {
+  list-style: none;
+}
+.navbar--barra nav ul li a {
+  text-decoration: none;
+  color: #743a11;
+}
+.navbar--barra nav ul li a:hover {
+  background-color: red;
+}
+.navbar--banner {
+  background-image: url("../assets/portada-index.jpeg");
+  height: 20rem;
+  width: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: none;
+}
+.navbar--banner-promo {
+  width: 50%;
+}
+.navbar--banner-promo p {
+  font-size: 3rem;
+  text-align: center;
+  color: #743a11;
+}
+.navbar--banner-form {
+  width: 50%;
+  background-color: rgba(116, 58, 17, 0.3215686275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/*Tamaño logo*/
+.cont-logo {
+  height: 0;
+  width: 150px;
+  padding: 1rem;
+}
+.cont-logo img {
+  width: 100%;
+}
+
+.btn-k {
+  background-color: #743a11;
+  color: #ffffff;
+  padding: 0.4rem;
+  margin: 0.6rem;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Main */
+.contenido-principal {
+  margin: 30px 0 50px;
+  grid-area: main;
+}
+.contenido-principal .title {
+  font-weight: 400;
+  color: #38c4b2;
+  text-align: center;
+}
+.contenido-principal .sub-title {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  flex-flow: wrap;
+}
+.card-flex .card {
+  width: 250px;
+  height: 18rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.card-flex .card img {
+  width: 100%;
+}
+.card-flex .card p {
+  line-height: 36px;
+}
+.card-flex .border {
+  border: 1px solid #000000;
+}
+
+/*# sourceMappingURL=main.css.map */

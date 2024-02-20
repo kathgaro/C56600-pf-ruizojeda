@@ -1,0 +1,33 @@
+$proyect-font:  "Quicksand", sans-serif;
+
+//COLORES
+$color-white: #f7f6f2;
+$color-txt:  #743a11;
+$bg-transparente: #743a1152;
+
+
+
+//ejemplo de variables en mixin
+$var-h: 50px;
+$var-w: 20px;
+
+
+
+// 🌟mapas 
+
+//map-get
+
+$size-title:(
+    title-prin: 20rem,
+    title-sec: 16rem,
+    title-ter: 13rem,
+    text: 3rem
+);
+//    title    size
+//    ☝       ☝
+
+@each $title, $size in $size-title{
+    .k__#{$title}{
+        font-size:$size;
+    }
+}

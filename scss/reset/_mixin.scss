@@ -1,0 +1,25 @@
+// MIXIN CON PARAMETROS - declaro
+// invocar - @include
+//            ancho    alto
+//              👇     👇
+@mixin sizes($w, $h) {
+    height: $h;
+    width: $w;
+ }
+ 
+ @mixin alineaciones ($justi, $align, $spacing){
+    display: flex;
+    justify-content: $justi;
+    align-items: $align;
+    gap: $spacing;
+ }
+
+
+ // mixin sin parametros
+ @mixin column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $var-w;
+    height: $var-h;
+ }
